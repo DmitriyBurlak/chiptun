@@ -1,6 +1,6 @@
 .list {
   font-size: 1.1rem;
-  color: $color-orange;
+  color: $color-red;
   max-width: 330px;
   padding: 0;
   text-align: center;
@@ -10,13 +10,13 @@
   li {
     display: none;
     list-style-type: none;
-    border: 1px solid $color-orange;
+    border: 1px solid $color-red;
     padding: 5px 0;
     margin-top: -1px;
   }
   &__title {
     position: relative;
-    border: 1px solid $color-orange;
+    border: 1px solid $color-red;
     padding: 5px 0;
     text-transform: uppercase;
   }
@@ -80,7 +80,7 @@
   content: ' ';
   height: 15px;
   width: 1px;
-  background-color: $color-orange;
+  background-color: $color-red;
 }
 .close:after {
   transform: rotate(-90deg);

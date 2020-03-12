@@ -1,0 +1,28 @@
+.what {
+  padding: 50px 0;
+}
+.what__title {
+  position: relative;
+
+  span {
+    position: absolute;
+    top: -38px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #e8e8e8;
+    @include font (9.1rem, 700);
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 1;
+  }
+  .title-what {
+    position: relative;
+    z-index: 10;
+  }
+}
+.what__text {
+  max-width: 1000px;
+  margin: 0 auto;
+  @include font (1.6rem, 400);
+  text-align: justify;
+}
