@@ -1,0 +1,20 @@
+{
+  "name": "chiptun",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch assets/sass/style.scss assets/css/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DmitriyBurlak/chiptun.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DmitriyBurlak/chiptun/issues"
+  },
+  "homepage": "https://github.com/DmitriyBurlak/chiptun#readme"
+}

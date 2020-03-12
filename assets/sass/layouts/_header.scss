@@ -1,0 +1,38 @@
+.header {
+  padding: 30px 0;
+  // box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__right {
+    width: 70%;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.social__link {
+  margin-left: 20px;
+  text-decoration: none;
+}
+.social__link span {
+  @extend %transition;
+}
+.social__link span:hover {
+  transform: translateY(-5px);
+}
+.phone {
+  font-weight: 700;
+  a {
+    text-decoration: none;
+    color: $color-text;
+  }
+}
+.time {
+  @include font (1.3rem, 700);
+  width: 20%;
+}

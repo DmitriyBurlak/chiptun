@@ -1,0 +1,53 @@
+.button {
+  padding: 14px 25px 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  @extend %transition;
+  &_header {
+    background: #ffffff;
+    border: 1px solid #D7D7D7;
+    color: #6b6358;
+    &:hover {
+      background: #f90e0e1f;
+      border: 1px solid #f90e0e1f;
+      color: $color-text;
+    }
+  }
+  &_orange {
+    background: $color-orange;
+    color: $color-light;
+    &:hover {
+      background: $color-hovered;
+    }
+    &-header {
+      padding: 2px 32px 0px;
+      font-size: 0.8rem;
+    }
+  }
+  &_big {
+    padding: 9px 22px 7px;
+  }
+  &_find {
+    width: 100%;
+    padding: 5px 22px 3px;
+  }
+  &_scan {
+    width: 98px;
+    font-size: 1.1rem;
+    padding: 3px;
+  }
+  &_form {
+    width: 98px;
+    font-size: 0.9rem;
+    padding: 1px;
+  }
+  &_blue {
+    background: $color-blue;
+    color: $color-light;
+    &:hover {
+      background: $color-additional;
+    }
+  }
+}

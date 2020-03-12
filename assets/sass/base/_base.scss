@@ -1,0 +1,21 @@
+html {
+  font-size: 10px;
+}
+body {
+  @extend %font;
+  @include font (1.5rem, 400);
+  color: $color-text;
+}
+
+h1 {
+  @include font (6rem, 400);
+}
+
+h2 {
+  @include font (2.4rem, 2.9rem);
+  text-align: center;
+}
+
+h3 {
+  @include font (1.9rem, 2.3rem);
+}
