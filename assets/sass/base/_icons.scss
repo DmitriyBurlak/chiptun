@@ -1,5 +1,4 @@
 .ico {
-  cursor: pointer;
   display: inline-block;
   background-size: cover;
   width: 20px;
@@ -16,13 +15,13 @@
   background-image: url(../img/icons/facebook.svg);
 }
 
+
 .ico_advantage {
   width: 50px;
   height: 40px;
   filter: invert(15%) sepia(93%) saturate(4731%) hue-rotate(351deg) brightness(99%) contrast(102%);
   margin-right: 25px;
 }
-
 .ico_chip {
   background-image: url(../img/icons/fast.svg);
 }
@@ -46,4 +45,26 @@
 }
 .ico_speed {
   background-image: url(../img/icons/diagram.svg);
+}
+
+
+.ico_info {
+  margin-right: 10px;
+}
+.ico_phone {
+  background-image: url(../img/icons/phone.svg);
+}
+.ico_whatsapp {
+  background-image: url(../img/icons/whatsapp.svg);
+  margin-top: -3px;
+  margin-left: -5px;
+  width: 25px;
+  height: 25px;
+}
+.ico_pin {
+  background-image: url(../img/icons/pin.svg);
+  width: 32px;
+}
+.ico_clock {
+  background-image: url(../img/icons/clock.svg);
 }

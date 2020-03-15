@@ -1,42 +1,46 @@
 .contact {
   position: relative;
 }
-
 .info {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background: $color-light;
   padding: 30px;
+  padding-bottom: 0;
   border: 1px solid $color-red;
   border-radius: 10px;
-}
-.info__title {
-  font-size: 2.3rem;
-  font-weight: 700;
-  text-align: center;
-  padding-bottom: 20px;
+  max-width: 600px;
 }
 .info__content{
+  padding-top: 20px;
   display: flex;
   justify-content: space-between;
 }
 .info__left, 
 .info__right {
-  width: 47%;
+  width: 48%;
 }
 .info__item {
   padding-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
 }
 .info__description {
   font-size: 13px;
-  padding-bottom: 5px;
 }
 .info_text {
   font-weight: 700;
-
   a {
     text-decoration: none;
     color: $color-text;
   }
+}
+.info__item_left {
+  flex-direction: column;
+  margin-left: 30px;
+}
+.social_info {
+  padding-top: 10px;
+  margin-left: -20px;
 }
