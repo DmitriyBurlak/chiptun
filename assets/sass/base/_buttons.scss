@@ -6,13 +6,24 @@
   border-radius: 4px;
   cursor: pointer;
   @extend %transition;
-  &_red {
+  &_empty {
     background: $color-light;
     border: 1px solid #D7D7D7;
     &:hover {
       background: $color-red;
       border: 1px solid $color-red;
       color: $color-light;
+    }
+  }
+  &_red {
+    padding: 9px 25px 9px;
+    background: rgba(0,0,0,0.6);
+    color: $color-light;
+    border: 1px solid $color-main;
+    @extend %transition;
+
+    &:hover {
+      background: rgba(0,0,0,1);
     }
   }
 }

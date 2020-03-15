@@ -1,0 +1,42 @@
+.contact {
+  position: relative;
+}
+
+.info {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: $color-light;
+  padding: 30px;
+  border: 1px solid $color-red;
+  border-radius: 10px;
+}
+.info__title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.info__content{
+  display: flex;
+  justify-content: space-between;
+}
+.info__left, 
+.info__right {
+  width: 47%;
+}
+.info__item {
+  padding-bottom: 20px;
+}
+.info__description {
+  font-size: 13px;
+  padding-bottom: 5px;
+}
+.info_text {
+  font-weight: 700;
+
+  a {
+    text-decoration: none;
+    color: $color-text;
+  }
+}

@@ -15,7 +15,11 @@ h2 {
   @include font (5rem, 700);
   text-align: center;
 }
-
 h3 {
-  @include font (1.9rem, 2.3rem);
+  @include font (2.3rem, 700);
+}
+h4 {
+  @include font (1.8rem, 700);
+  text-transform: uppercase;
+  padding-bottom: 30px;
 }

@@ -15,3 +15,35 @@
 .ico_facebook {
   background-image: url(../img/icons/facebook.svg);
 }
+
+.ico_advantage {
+  width: 50px;
+  height: 40px;
+  filter: invert(15%) sepia(93%) saturate(4731%) hue-rotate(351deg) brightness(99%) contrast(102%);
+  margin-right: 25px;
+}
+
+.ico_chip {
+  background-image: url(../img/icons/fast.svg);
+}
+.ico_pedal {
+  background-image: url(../img/icons/pedals.svg);
+  height: 38px;
+}
+.ico_gearbox {
+  background-image: url(../img/icons/transmission.svg);
+  width: 76px;
+  height: 38px;
+}
+.ico_fuel {
+  background-image: url(../img/icons/fuel.svg);
+  width: 40px;
+  height: 40px;
+}
+.ico_conditioner {
+  background-image: url(../img/icons/conditioner.svg);
+  width: 55px;
+}
+.ico_speed {
+  background-image: url(../img/icons/diagram.svg);
+}

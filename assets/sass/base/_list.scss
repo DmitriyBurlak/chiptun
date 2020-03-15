@@ -1,9 +1,7 @@
 .list {
-  font-size: 1.1rem;
-  color: $color-red;
-  max-width: 330px;
+  max-width: 100%;
   padding: 0;
-  text-align: center;
+  text-align: left;
   cursor: pointer;
   box-shadow: 0px 5px 5px 0px rgba(34, 60, 80, 0.2);
   
@@ -13,95 +11,48 @@
     border: 1px solid $color-red;
     padding: 5px 0;
     margin-top: -1px;
+    text-align: justify;
   }
   &__title {
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 2.5rem;
     border: 1px solid $color-red;
     padding: 5px 0;
     text-transform: uppercase;
   }
-  &_who{
-    margin: 55px 0 0 0;
-  }
-  &_scan {
-    color: $color-detailed;
-    box-shadow: none;
-    padding-top: 10px;
-
-    li {
-      border-color: $color-detailed;
-      padding: 5px 0;
-    }
-    &__title {
-      border-color: $color-detailed;
-      padding: 3px 0;
-    }
-  }
   &_question {
-    @include font (1.3rem, 2rem);
-    color: $color-text;
-    max-width: 100%;
-    text-align: left;
     box-shadow: none;
     margin: 0;
     margin-top: -1px;
     li {
-      padding: 18px 20px;
+      padding: 25px 25px;
       text-transform: none;
     }
     &__title {
-      display: block;
-      padding: 18px 20px;
-      text-transform: none;
+      font-weight: 700;
+      padding: 25px 20px;
+      border-radius: 5px;
     }
   }
 }
 
 
-
-
-
-
-
-
-
-
-
 .close {
-  position: absolute;
-  right: 10px;
-  top: 8px;
-  width: 12px;
-  height: 12px;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  padding-left: 40px;
+  margin-right: 10px;
 }
-  
 .close:before, .close:after {
   position: absolute;
   content: ' ';
   height: 15px;
-  width: 1px;
+  width: 2px;
   background-color: $color-red;
 }
 .close:after {
   transform: rotate(-90deg);
-}
-
-.close_scan {
-  top: 6px;
-  width: 10px;
-  height: 10px;
-}
-.close_scan:before, .close_scan:after {
-  height: 13px;
-  background-color: $color-detailed;
-}
-
-.close_question {
-  top: 22px;
-  width: 10px;
-  height: 10px;
-}
-.close_question:before, .close_question:after {
-  height: 10px;
-  width: 2px;
 }
