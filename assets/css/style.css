@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *:before,
 *:after {
@@ -24,7 +25,7 @@ body {
   overflow-x: hidden;
 }
 
-.work__content, .navigation__link:after, .social__link span, .heptagon_service, .button_red, .button {
+.footer__link a, .work__content, .navigation__link:after, .social__link span, .heptagon_service, .arrow:after, .arrow:before, .button_red, .button_black, .button {
   transition: all 0.3s ease-out;
 }
 
@@ -95,7 +96,7 @@ h3 {
   font-weight: 700;
   color: #444444;
   text-transform: uppercase;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
 }
 .button_empty {
@@ -107,14 +108,63 @@ h3 {
   border: 1px solid #ff1119;
   color: #ffffff;
 }
-.button_red {
+.button_black {
   padding: 9px 25px 9px;
   background: rgba(0, 0, 0, 0.6);
   color: #ffffff;
   border: 1px solid #000000;
 }
-.button_red:hover {
+.button_black:hover {
   background: black;
+}
+.button_red {
+  padding: 20px 35px 20px;
+  background: #ff1119;
+  color: #ffffff;
+  border: 1px solid #ff1119;
+  border-radius: 10px;
+}
+.button_red:hover {
+  background: #d60007;
+}
+
+.arrow {
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  text-align: center;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+.arrow:after, .arrow:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 5px;
+  background: #000000;
+  transform: rotate(45deg);
+}
+.arrow:before {
+  transform: rotate(-45deg);
+  bottom: 7px;
+}
+.arrow:after {
+  top: 7px;
+}
+.arrow_right {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.arrow_left {
+  cursor: pointer;
+  left: -25px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-180deg);
+}
+.arrow:hover:after, .arrow:hover:before {
+  background: #ff1119;
 }
 
 .ico {
@@ -150,13 +200,13 @@ h3 {
 
 .ico_pedal {
   background-image: url(../img/icons/pedals.svg);
-  height: 38px;
+  height: 36px;
 }
 
 .ico_gearbox {
   background-image: url(../img/icons/transmission.svg);
-  width: 76px;
-  height: 38px;
+  width: 68px;
+  height: 40px;
 }
 
 .ico_fuel {
@@ -167,7 +217,7 @@ h3 {
 
 .ico_conditioner {
   background-image: url(../img/icons/conditioner.svg);
-  width: 55px;
+  width: 60px;
 }
 
 .ico_speed {
@@ -197,6 +247,10 @@ h3 {
 
 .ico_clock {
   background-image: url(../img/icons/clock.svg);
+}
+
+.ico_footer {
+  filter: invert(100%) sepia(100%) saturate(15%) hue-rotate(208deg) brightness(104%) contrast(102%);
 }
 
 .heptagon {
@@ -518,11 +572,11 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
   font-size: 1.6rem;
   font-weight: 400;
-  padding: 50px 0 50px;
+  padding: 50px;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -544,6 +598,54 @@ h3 {
   justify-content: flex-start;
   align-items: center;
   padding-bottom: 15px;
+}
+
+.reviews {
+  padding: 50px 0;
+}
+
+.reviews__wrapper {
+  position: relative;
+}
+
+.reviews__swiper {
+  overflow: hidden;
+  padding-top: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.review {
+  padding: 20px;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.person__photo {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.person__name {
+  font-size: 1.6rem;
+  padding-bottom: 5px;
+  font-weight: 700;
+}
+
+.person__city {
+  font-size: 1.3rem;
+}
+
+.comment {
+  font-size: 1.4rem;
+  line-height: 25px;
+  text-align: justify;
 }
 
 .navigation {
@@ -635,8 +737,13 @@ h3 {
   padding-bottom: 30px;
 }
 
+.work__button {
+  padding-top: 30px;
+  text-align: center;
+}
+
 .question {
-  padding: 30px 0 100px;
+  padding: 50px 0 100px;
 }
 
 .question__wrapper {
@@ -644,9 +751,8 @@ h3 {
 }
 
 .question__ask {
-  padding-top: 50px;
+  margin-top: 50px;
   box-shadow: 0px 15px 20px 10px rgba(0, 0, 0, 0.05);
-  margin-bottom: 50px;
 }
 
 .contact {
@@ -660,7 +766,6 @@ h3 {
   background: #ffffff;
   padding: 30px;
   padding-bottom: 0;
-  border: 1px solid #ff1119;
   border-radius: 10px;
   max-width: 600px;
 }
@@ -705,7 +810,45 @@ h3 {
 }
 
 .footer {
+  background: #444444;
   padding: 40px 0;
+  color: #ffffff;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__title {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.footer__nav {
+  padding: 0;
+}
+
+.social_footer {
+  padding-top: 20px;
+}
+
+.footer__link {
+  list-style: none;
+  font-size: 1.4rem;
+  line-height: 25px;
+}
+.footer__link a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.footer__link a:hover {
+  color: #ff1119;
+}
+
+.footer__сopyright {
+  padding-top: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

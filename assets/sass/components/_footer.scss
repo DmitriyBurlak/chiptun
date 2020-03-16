@@ -1,3 +1,37 @@
 .footer {
+  background: $color-text;
   padding: 40px 0;
+  color: $color-light;
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__title {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.footer__nav {
+  padding: 0;
+}
+.social_footer {
+  padding-top: 20px;
+}
+.footer__link {
+  list-style: none;
+  font-size: 1.4rem;
+  line-height: 25px;
+  a {
+    text-decoration: none;
+    color: $color-light;
+    @extend %transition;
+
+    &:hover {
+      color: $color-red;
+    }
+  }
+}
+.footer__сopyright {
+  padding-top: 20px;
 }
