@@ -5,6 +5,7 @@ body {
   @extend %font;
   @include font (1.5rem, 400);
   color: $color-text;
+  overflow-x: hidden;
 }
 
 h1 {

@@ -29,11 +29,17 @@
     li {
       padding: 25px 25px;
       text-transform: none;
+      @extend %transition;
     }
     &__title {
       font-weight: 700;
       padding: 25px 20px;
       border-radius: 5px;
+    }
+    &_opened {
+      li {
+        display: block;
+      }
     }
   }
 }

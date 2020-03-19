@@ -19,32 +19,28 @@
 .ico_advantage {
   width: 50px;
   height: 40px;
-  filter: invert(15%) sepia(93%) saturate(4731%) hue-rotate(351deg) brightness(99%) contrast(102%);
+  filter: none;
   margin-right: 25px;
 }
 .ico_chip {
-  background-image: url(../img/icons/fast.svg);
+  background-image: url(../img/icons/what/fast.svg);
 }
 .ico_pedal {
-  background-image: url(../img/icons/pedals.svg);
-  height: 36px;
+  background-image: url(../img/icons/what/pedals.svg);
 }
 .ico_gearbox {
-  background-image: url(../img/icons/transmission.svg);
-  width: 68px;
-  height: 40px;
+  background-image: url(../img/icons/what/shifter.svg);
+  width: 74px;
 }
 .ico_fuel {
-  background-image: url(../img/icons/fuel.svg);
+  background-image: url(../img/icons/what/fuel.svg);
   width: 40px;
-  height: 40px;
 }
 .ico_conditioner {
-  background-image: url(../img/icons/conditioner.svg);
-  width: 60px;
+  background-image: url(../img/icons/what/conditioner.svg); width: 60px;
 }
 .ico_speed {
-  background-image: url(../img/icons/diagram.svg);
+  background-image: url(../img/icons/what/diagram.svg);
 }
 
 
@@ -71,3 +67,27 @@
 .ico_footer {
   filter: invert(100%) sepia(100%) saturate(15%) hue-rotate(208deg) brightness(104%) contrast(102%);
 }
+// About Us
+.ico__about {
+  filter: none;
+  margin-right: 25px;
+  width: 40px;
+  height: 40px;
+}
+.ico_experience {
+  background-image: url(../img/icons/about/experience.svg);
+}
+.ico_personal {
+  background-image: url(../img/icons/about/man.svg);
+}
+.ico_guarantee {
+  background-image: url(../img/icons/about/guarantee.svg);
+}
+.ico_action {
+  background-image: url(../img/icons/about/car.svg);
+}
+.ico_dealer {
+  background-image: url(../img/icons/about/not-touch.svg);
+}
+
+

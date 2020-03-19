@@ -22,10 +22,9 @@ html,
 body {
   width: 100%;
   margin: 0;
-  overflow-x: hidden;
 }
 
-.footer__link a, .work__content, .navigation__link:after, .social__link span, .heptagon_service, .arrow:after, .arrow:before, .button_red, .button_black, .button {
+.footer__link a, .work__content, .navigation__link:after, .social__link span, .list_question li, .arrow:after, .arrow:before, .button_red, .button_black, .button {
   transition: all 0.3s ease-out;
 }
 
@@ -41,6 +40,7 @@ body {
   font-size: 1.5rem;
   font-weight: 400;
   color: #444444;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -134,6 +134,7 @@ h3 {
   outline: none;
   text-align: center;
   position: absolute;
+  top: 220px;
   width: 30px;
   height: 30px;
 }
@@ -154,14 +155,11 @@ h3 {
 }
 .arrow_right {
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 .arrow_left {
   cursor: pointer;
   left: -25px;
-  top: 50%;
-  transform: translateY(-50%) rotate(-180deg);
+  transform: rotate(-180deg);
 }
 .arrow:hover:after, .arrow:hover:before {
   background: #ff1119;
@@ -190,38 +188,35 @@ h3 {
 .ico_advantage {
   width: 50px;
   height: 40px;
-  filter: invert(15%) sepia(93%) saturate(4731%) hue-rotate(351deg) brightness(99%) contrast(102%);
+  filter: none;
   margin-right: 25px;
 }
 
 .ico_chip {
-  background-image: url(../img/icons/fast.svg);
+  background-image: url(../img/icons/what/fast.svg);
 }
 
 .ico_pedal {
-  background-image: url(../img/icons/pedals.svg);
-  height: 36px;
+  background-image: url(../img/icons/what/pedals.svg);
 }
 
 .ico_gearbox {
-  background-image: url(../img/icons/transmission.svg);
-  width: 68px;
-  height: 40px;
+  background-image: url(../img/icons/what/shifter.svg);
+  width: 74px;
 }
 
 .ico_fuel {
-  background-image: url(../img/icons/fuel.svg);
+  background-image: url(../img/icons/what/fuel.svg);
   width: 40px;
-  height: 40px;
 }
 
 .ico_conditioner {
-  background-image: url(../img/icons/conditioner.svg);
+  background-image: url(../img/icons/what/conditioner.svg);
   width: 60px;
 }
 
 .ico_speed {
-  background-image: url(../img/icons/diagram.svg);
+  background-image: url(../img/icons/what/diagram.svg);
 }
 
 .ico_info {
@@ -253,162 +248,50 @@ h3 {
   filter: invert(100%) sepia(100%) saturate(15%) hue-rotate(208deg) brightness(104%) contrast(102%);
 }
 
-.heptagon {
-  width: 132px;
-  height: 132px;
-  filter: drop-shadow(0px 0px 2px rgba(34, 60, 80, 0.5));
-}
-.heptagon__clip {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-}
-
-.heptagon_service {
-  filter: drop-shadow(0px 12px 9px rgba(34, 60, 80, 0.2));
-}
-.heptagon_service:hover {
-  transform: translateY(5px);
-  filter: drop-shadow(0px 0px 1px rgba(34, 60, 80, 0.2));
-}
-.heptagon_service__clip {
-  position: relative;
-}
-
-.heptagon_service-litle {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 115px;
-  height: 115px;
-}
-.heptagon_service-litle__clip {
-  position: relative;
-}
-.heptagon_service-litle__clip img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.heptagon_social {
+.ico__about {
   filter: none;
-  width: 163px;
-  height: 163px;
-  margin-right: -18px;
-}
-.heptagon_social__clip {
-  position: relative;
-  background-color: #b1ddfd;
-}
-
-.heptagon_social-nested {
-  filter: none;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 160px;
-  height: 160px;
-}
-.heptagon_social-nested__clip {
-  position: relative;
-}
-.heptagon_social-nested__clip img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.heptagon_m-social {
-  filter: none;
-  width: 43px;
-  height: 43px;
-}
-.heptagon_m-social__clip {
-  position: relative;
-  background-color: #b1ddfd;
-}
-
-.heptagon_m-social-nested {
-  filter: none;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  margin-right: 25px;
   width: 40px;
   height: 40px;
 }
-.heptagon_m-social-nested__clip {
-  position: relative;
-}
-.heptagon_m-social-nested__clip img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+
+.ico_experience {
+  background-image: url(../img/icons/about/experience.svg);
 }
 
-.heptagon_min-social {
-  filter: none;
-  width: 20px;
-  height: 20px;
-}
-.heptagon_min-social__clip {
-  position: relative;
-  background-color: #b1ddfd;
+.ico_personal {
+  background-image: url(../img/icons/about/man.svg);
 }
 
-.heptagon_min-social-nested {
-  filter: none;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 17px;
-  height: 17px;
-}
-.heptagon_min-social-nested__clip {
-  position: relative;
-}
-.heptagon_min-social-nested__clip img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.ico_guarantee {
+  background-image: url(../img/icons/about/guarantee.svg);
 }
 
-.point {
-  width: 100%;
-  height: 70px;
-  filter: drop-shadow(0px 0px 0px rgba(34, 60, 80, 0.2));
-}
-.point__clip {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: #e1f9ff;
-  clip-path: polygon(97% 0, 100% 50%, 97% 100%, 3% 100%, 0% 50%, 3% 0%);
+.ico_action {
+  background-image: url(../img/icons/about/car.svg);
 }
 
-.point__content {
+.ico_dealer {
+  background-image: url(../img/icons/about/not-touch.svg);
+}
+
+#chip2 {
+  width: 65px;
+  height: 65px;
+  position: relative;
+  overflow: visible;
+}
+
+.block {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  position: absolute;
-  width: 70%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.point__text {
-  padding-left: 15px;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 50px;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.05);
 }
 
 .list {
@@ -449,6 +332,9 @@ h3 {
   padding: 25px 20px;
   border-radius: 5px;
 }
+.list_question_opened li {
+  display: block;
+}
 
 .close {
   position: relative;
@@ -473,6 +359,7 @@ h3 {
 .wrapper {
   max-width: 1170px;
   margin: auto;
+  padding: 0 15px;
 }
 
 .header {
@@ -566,18 +453,6 @@ h3 {
 
 .what {
   padding: 50px 0;
-}
-
-.what__content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  font-size: 1.6rem;
-  font-weight: 400;
-  padding: 50px;
-  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.05);
 }
 
 .what__text {
@@ -740,6 +615,15 @@ h3 {
 .work__button {
   padding-top: 30px;
   text-align: center;
+}
+
+.about {
+  padding: 50px 0;
+}
+
+.about__text {
+  width: 49%;
+  text-align: justify;
 }
 
 .question {

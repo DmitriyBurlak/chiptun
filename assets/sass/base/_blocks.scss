@@ -1,0 +1,10 @@
+.block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  @include font (1.6rem, 400);
+  padding: 50px;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.05);
+}
