@@ -24,7 +24,7 @@ body {
   margin: 0;
 }
 
-.footer__link a, .work__content, .navigation__link:after, .social__link span, .list_question li, .arrow:after, .arrow:before, .button_red, .button_black, .button {
+.footer__link a, .work__content, .navigation__link:after, .social__link span, .accordion__content, .accordion__top:after, .arrow:after, .arrow:before, .button_red, .button_black, .button {
   transition: all 0.3s ease-out;
 }
 
@@ -275,13 +275,6 @@ h3 {
   background-image: url(../img/icons/about/not-touch.svg);
 }
 
-#chip2 {
-  width: 65px;
-  height: 65px;
-  position: relative;
-  overflow: visible;
-}
-
 .block {
   display: flex;
   justify-content: space-between;
@@ -326,6 +319,9 @@ h3 {
 .list_question li {
   padding: 25px 25px;
   text-transform: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
 .list_question__title {
   font-weight: 700;
@@ -334,6 +330,7 @@ h3 {
 }
 .list_question_opened li {
   display: block;
+  max-height: 100%;
 }
 
 .close {
@@ -354,6 +351,66 @@ h3 {
 
 .close:after {
   transform: rotate(-90deg);
+}
+
+.accordions {
+  padding-top: 50px;
+  margin: 30px 0;
+  max-width: 100%;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.05);
+}
+
+.accordion {
+  cursor: pointer;
+  border-bottom: 2px solid #fff;
+  transition: all 0.3s;
+  margin-top: -3px;
+}
+.accordion__top {
+  position: relative;
+  line-height: 2.5rem;
+  border: 1px solid #ff1119;
+  font-weight: 700;
+  padding: 25px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+.accordion__top:before, .accordion__top:after {
+  position: absolute;
+  content: " ";
+  top: 50%;
+  right: 25px;
+  height: 2px;
+  width: 15px;
+  background-color: #ff1119;
+}
+.accordion__top:after {
+  transform: rotate(-90deg);
+}
+.accordion__title {
+  width: 95%;
+}
+.accordion__content {
+  height: 0px;
+  overflow: hidden;
+}
+.accordion__text {
+  padding: 25px 25px;
+  border: 1px solid #ff1119;
+  border-radius: 5px;
+  margin-top: -1px;
+  text-align: justify;
+  line-height: 25px;
+}
+
+.accordion_opened .accordion__top:after {
+  transform: rotate(0deg);
+}
+.accordion_opened .accordion__content {
+  height: 100px;
 }
 
 .wrapper {
@@ -537,6 +594,10 @@ h3 {
   list-style: none;
   padding: 0 10px;
   cursor: pointer;
+}
+.navigation__link a {
+  text-decoration: none;
+  color: #444444;
 }
 .navigation__link:after {
   content: "";

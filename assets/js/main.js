@@ -13,39 +13,48 @@ var mySwiper = new Swiper('.reviews__swiper', {
   }
 });
 
-
-const list = document.querySelectorAll('.list_question');
-console.log(list);
+const list = document.querySelectorAll('.accordion');
 for (let i = 0; i < list.length; i++) {
   list[i].addEventListener('click', () => {
-    list[i].classList.toggle('list_question_opened')
+    list[i].classList.toggle('accordion_opened');
+    let panel = list[i].lastElementChild;
+    if (list[i].classList.contains('accordion_opened')) 
+      panel.style.height = panel.scrollHeight+'px';
+      else panel.style.height = 0+'px';
   });
+};
+
+// Scroll
+// let linkNav = document.querySelectorAll('section[id]');
+// let anchor = document.querySelectorAll('.navigation__link');
+// console.log('anchor: ', anchor);
+
+
+//     let w = window.pageYOffset;
+//       let start = null;
+
+//         console.log(w);
+
+// // console.log('linkNav: ', linkNav);
+// for (let i = 0; i < linkNav.length; i++) {
+//   linkNav[i].addEventListener('click', () => {
+
+//   });
+// }Hf
+
+
+
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+    
+    const blockID = anchor.getAttribute('href').substr(1)
+    
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
 }
-
-
-
-
-
-
-// Lizy
-(function(){ 
-
-  document.onreadystatechange = () => {
-
-    if (document.readyState === 'complete') {
-              
-      /**
-       * Setup your Lazy Line element.
-       * see README file for more settings
-       */
-
-      let el = document.querySelector('#chip2');
-      let myAnimation = new LazyLinePainter(el, {"ease":"easeInOutQuad","strokeWidth":1,"strokeOpacity":1,"strokeColor":"#ff1119","reverse":true}); 
-      myAnimation.paint(); 
-    }
-  }
-
-})();
-
-
-

@@ -29,7 +29,10 @@
     li {
       padding: 25px 25px;
       text-transform: none;
-      @extend %transition;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      // @extend %transition;
     }
     &__title {
       font-weight: 700;
@@ -39,11 +42,11 @@
     &_opened {
       li {
         display: block;
+        max-height: 100%;
       }
     }
   }
 }
-
 
 .close {
   position: relative;
@@ -61,4 +64,78 @@
 }
 .close:after {
   transform: rotate(-90deg);
+}
+
+
+
+
+
+
+
+.accordions {
+  padding-top: 50px;
+  margin: 30px 0;
+  max-width: 100%;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.05);
+}
+
+.accordion {
+  cursor: pointer;
+  border-bottom: 2px solid #fff;
+  transition: all .3s;
+  margin-top: -3px;
+
+  &__top {
+    position: relative;
+    line-height: 2.5rem;
+    border: 1px solid $color-red;
+    font-weight: 700;
+    padding: 25px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+
+    &:before, 
+    &:after {
+      position: absolute;
+      content: ' ';
+      top: 50%;
+      right: 25px;
+      height: 2px;
+      width: 15px;
+      background-color: $color-red;
+    }
+    &:after {
+      transform: rotate(-90deg);
+      @extend %transition;
+    }
+  }
+  &__title {
+    width: 95%;
+  }
+  &__content {
+    height: 0px;
+    overflow: hidden;
+    @extend %transition;
+  }
+  &__text {
+    padding: 25px 25px;
+    border: 1px solid $color-red;
+    border-radius: 5px;
+    margin-top: -1px;
+    text-align: justify;
+    line-height: 25px;
+  }
+}
+.accordion_opened {
+  .accordion__top {
+    &:after {
+      transform: rotate(0deg);
+    }
+  }
+  .accordion__content {
+    height: 100px;
+  }
 }

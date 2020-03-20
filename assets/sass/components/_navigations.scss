@@ -11,6 +11,11 @@
   list-style: none;
   padding: 0 10px;
   cursor: pointer;
+
+  a {
+    text-decoration: none;
+    color: $color-text;
+  }
   
   &:after {
     content: "";
