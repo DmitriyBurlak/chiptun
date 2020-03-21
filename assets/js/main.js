@@ -12,49 +12,26 @@ var mySwiper = new Swiper('.reviews__swiper', {
     }
   }
 });
-
-const list = document.querySelectorAll('.accordion');
-for (let i = 0; i < list.length; i++) {
-  list[i].addEventListener('click', () => {
-    list[i].classList.toggle('accordion_opened');
-    let panel = list[i].lastElementChild;
-    if (list[i].classList.contains('accordion_opened')) 
+// accordion
+const lists = document.querySelectorAll('.accordion');
+for (let list of lists) {
+  list.addEventListener('click', () => {
+    list.classList.toggle('accordion_opened');
+    let panel = list.lastElementChild;
+    if (list.classList.contains('accordion_opened')) 
       panel.style.height = panel.scrollHeight+'px';
       else panel.style.height = 0+'px';
   });
 };
-
 // Scroll
-// let linkNav = document.querySelectorAll('section[id]');
-// let anchor = document.querySelectorAll('.navigation__link');
-// console.log('anchor: ', anchor);
-
-
-//     let w = window.pageYOffset;
-//       let start = null;
-
-//         console.log(w);
-
-// // console.log('linkNav: ', linkNav);
-// for (let i = 0; i < linkNav.length; i++) {
-//   linkNav[i].addEventListener('click', () => {
-
-//   });
-// }Hf
-
-
-
-const anchors = document.querySelectorAll('a[href*="#"]')
-
+const anchors = document.querySelectorAll('a[href*="#"]');
 for (let anchor of anchors) {
   anchor.addEventListener('click', function (e) {
-    e.preventDefault()
-    
+    e.preventDefault();
     const blockID = anchor.getAttribute('href').substr(1)
-    
     document.getElementById(blockID).scrollIntoView({
       behavior: 'smooth',
       block: 'start'
     })
   })
-}
+};

@@ -1,115 +1,44 @@
-.list {
+.accordions {
+  padding-top: 50px;
   max-width: 100%;
-  padding: 0;
   text-align: left;
-  cursor: pointer;
-  box-shadow: 0px 5px 5px 0px rgba(34, 60, 80, 0.2);
-  
-  li {
-    display: none;
-    list-style-type: none;
-    border: 1px solid $color-red;
-    padding: 5px 0;
-    margin-top: -1px;
-    text-align: justify;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.05);
+
+  &_model {
+    box-shadow: none;
   }
-  &__title {
+}
+.accordion {
+  transition: all .3s;
+  margin-top: -1px;
+
+  &__top {
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    line-height: 2.5rem;
-    border: 1px solid $color-red;
-    padding: 5px 0;
-    text-transform: uppercase;
-  }
-  &_question {
-    box-shadow: none;
-    margin: 0;
-    margin-top: -1px;
-    li {
-      padding: 25px 25px;
-      text-transform: none;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.2s ease-out;
-      // @extend %transition;
-    }
-    &__title {
-      font-weight: 700;
-      padding: 25px 20px;
-      border-radius: 5px;
-    }
-    &_opened {
-      li {
-        display: block;
-        max-height: 100%;
-      }
-    }
-  }
-}
-
-.close {
-  position: relative;
-  width: 15px;
-  height: 15px;
-  padding-left: 40px;
-  margin-right: 10px;
-}
-.close:before, .close:after {
-  position: absolute;
-  content: ' ';
-  height: 15px;
-  width: 2px;
-  background-color: $color-red;
-}
-.close:after {
-  transform: rotate(-90deg);
-}
-
-
-
-
-
-
-
-.accordions {
-  padding-top: 50px;
-  margin: 30px 0;
-  max-width: 100%;
-  padding: 0;
-  text-align: left;
-  cursor: pointer;
-  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.05);
-}
-
-.accordion {
-  cursor: pointer;
-  border-bottom: 2px solid #fff;
-  transition: all .3s;
-  margin-top: -3px;
-
-  &__top {
-    position: relative;
     line-height: 2.5rem;
     border: 1px solid $color-red;
     font-weight: 700;
     padding: 25px 20px;
     border-radius: 5px;
     text-transform: uppercase;
+  }
 
+  &__status {
+    position: relative;
+    right: 15px;
     &:before, 
     &:after {
       position: absolute;
       content: ' ';
-      top: 50%;
-      right: 25px;
       height: 2px;
       width: 15px;
       background-color: $color-red;
+      @extend %transition;
     }
     &:after {
       transform: rotate(-90deg);
-      @extend %transition;
     }
   }
   &__title {
@@ -128,14 +57,57 @@
     text-align: justify;
     line-height: 25px;
   }
+
+  &_model {
+    &__top {
+      border: 0;
+      background-color: $color-additional;
+      border-radius: 0;
+    }
+    
+    &__status {
+      right: 40px;
+
+      &:before, 
+      &:after {
+        transform: rotate(-140deg);
+        height: 3px;
+        background-color: $color-text;
+      }
+      &:after {
+        transform: rotate(-45deg);
+        right: -25px;
+      }
+    }
+    &__title {
+      width: 100%;
+      text-align: center;
+    }
+    &__content {
+      background-color: $color-primary;
+    }
+    &__text {
+      border: 0;
+      border-radius: 0;
+    }
+  }
 }
 .accordion_opened {
-  .accordion__top {
+  .accordion__status {
     &:after {
       transform: rotate(0deg);
     }
   }
   .accordion__content {
     height: 100px;
+  }
+
+  .accordion_model__status {
+    &:before {
+      transform: rotate(-225deg);
+    }
+    &:after {
+      transform: rotate(45deg);
+    }
   }
 }

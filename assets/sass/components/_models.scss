@@ -1,0 +1,26 @@
+
+.models {
+  padding: 50px 0;
+}
+.models__content {
+  display: flex;
+  justify-content: space-between;
+}
+.model {
+  text-align: center;
+}
+.model__name {
+  padding-top: 20px;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+.all-model {
+  background-color: $color-additional;
+}
+
+.model-range {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 20px;
+}
